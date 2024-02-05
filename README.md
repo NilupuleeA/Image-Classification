@@ -1,1 +1,1 @@
-# Image-Classification
+# Signal-Processing-Cup-2024
