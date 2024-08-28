@@ -1,27 +1,49 @@
-IEEE Signal Processing Cup 2024 - Team Wavemasters
-Project Overview
-This  contains the code and documentation for our participation in the IEEE Signal Processing Cup 2024. The competition challenges teams to address the problem of text-independent far-field speaker recognition under noise and reverberation conditions for mobile robots. Our team, Wavemasters, approached this challenge by leveraging signal processing techniques and machine learning algorithms to develop a robust speaker recognition system.
+# IEEE Signal Processing Cup 2024 - Team Wavemasters
 
-Project Description
-Our project focuses on developing a robust speaker recognition system capable of accurately identifying speakers from speech signals captured by mobile robots under challenging acoustic environments. The key components of our approach include:
+## 🚀 Project Overview
 
-Noise Removal and Amplification: Utilizing Wavelet Transform for signal denoising.
-Feature Extraction: Using Mel-Frequency Cepstral Coefficients (MFCCs) for robust feature extraction from audio signals.
-Data Augmentation: Applying techniques like Gaussian noise addition, time stretching, pitch scaling, and random gain modulation to enhance the training dataset.
-Speaker Recognition: Implementing a VGGish pre-trained model for extracting high-level semantic embeddings for downstream classification tasks.
+This project tackles the challenging task of **text-independent far-field speaker recognition** under noise and reverberation conditions, specifically for mobile robots. Our goal is to develop a robust speaker recognition system using advanced signal processing techniques and machine learning algorithms.
 
-Methodology
-Wavelet-based Signal Denoising:
+## 📝 Project Description
 
-Decomposition: Signal decomposed into approximation and detail coefficients.
-Thresholding: Noise mitigation using soft and hard thresholding techniques.
-Reconstruction: Signal reconstructed using modified coefficients, omitting high-frequency details.
-Feature Extraction:
+In this project, we focus on creating a system capable of accurately identifying speakers from speech signals captured by mobile robots in challenging acoustic environments. Our approach is composed of the following key components:
 
-Extracting MFCCs using the librosa library to capture essential audio characteristics.
-Data Augmentation:
+- **🎧 Noise Removal and Amplification:**  
+  Leveraging **Wavelet Transform** for effective signal denoising.
+  
+- **📊 Feature Extraction:**  
+  Utilizing **Mel-Frequency Cepstral Coefficients (MFCCs)** to extract robust audio features.
 
-Generating additional audio samples using various augmentation techniques to improve model generalization.
-Model Implementation:
+- **🛠️ Data Augmentation:**  
+  Applying techniques like **Gaussian noise addition, time stretching, pitch scaling,** and **random gain modulation** to expand and diversify the training dataset.
 
-Using the VGGish pre-trained model to extract 128-dimensional embeddings from denoised audio signals.
+- **🤖 Speaker Recognition:**  
+  Implementing the **VGGish pre-trained model** for high-level semantic embedding extraction, tailored for downstream classification tasks.
+
+## 🔍 Methodology
+
+### 1. Wavelet-based Signal Denoising
+
+- **Decomposition:**  
+  The audio signal is decomposed into approximation and detail coefficients using Discrete Wavelet Transform (DWT).
+
+- **Thresholding:**  
+  Noise is mitigated through soft and hard thresholding techniques applied to the detail coefficients.
+
+- **Reconstruction:**  
+  The signal is reconstructed using the modified coefficients, omitting high-frequency details for a cleaner output.
+
+### 2. Feature Extraction
+
+- **Mel-Frequency Cepstral Coefficients (MFCCs):**  
+  We extract MFCCs using the `librosa` library, capturing essential characteristics of the audio signals in the frequency domain.
+
+### 3. Data Augmentation
+
+- **Diverse Techniques:**  
+  We employ various augmentation techniques such as **Gaussian noise addition, time stretching, pitch scaling,** and **random gain modulation** to generate additional training samples, enhancing the model’s generalization capabilities.
+
+### 4. Model Implementation
+
+- **VGGish Pre-trained Model:**  
+  We use VGGish, a model pre-trained on large-scale audio data, to extract **128-dimensional embeddings** from denoised audio signals. These embeddings serve as the input for downstream classification tasks.
